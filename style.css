@@ -1,0 +1,712 @@
+.locked {
+    background: black;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .outter-shell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height:950px;
+    background: grey;
+    border-radius: 20px;
+  }
+  .edge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:480px;
+    height:930px;
+    background: black;
+    border-radius: 25px;
+  }
+  
+  #power {
+    position:absolute;
+    margin-top: -100px;
+    margin-left:480px;
+    width: 6px;
+    height: 70px;
+    background: black;
+    border-radius: 0px 10px 10px 0px;
+  }
+  #power:active{
+    width: 3px;
+  }
+  #vol-down {
+    position:absolute;
+    margin-top: -200px;
+    margin-left:480px;
+    width: 6px;
+    height: 70px;
+    background: black;
+    border-radius: 0px 0px 10px 0px;
+  }
+  #vol-down:active{
+    width: 3px;
+  }
+  #vol-up {
+    position:absolute;
+    margin-top: -270px;
+    margin-left:480px;
+    width: 6px;
+    height: 70px;
+    background: black;
+    border-radius: 0px 10px 0px 0px;
+  }
+  #vol-up:active{
+    width: 3px;
+  }
+  
+  .screen {
+    display: flex;
+    flex-direction: column;
+    width:460px;
+    height:915px;
+    background: black;
+    border-radius: 25px;
+  }
+  
+  
+  
+  .screen-canvas {
+    height:830px;
+    width:460px;
+    background: white;
+  }
+  
+  
+  
+  /* nav buttons styling start --------------------------------------------> */
+  .nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    height:50px;
+    width:460px;
+    background: white;
+    border-radius: 0px 0px 25px 25px;
+  }
+  .nav-buttons div:active {
+    opacity: 60%;
+  }
+  
+  
+  
+  .recent-button {
+    height: 35px;
+    width:10px;
+    margin-top: 7px;
+    margin-left: 25px;
+    border-radius: 10px;
+    background-color: black;
+  }
+  .recent-button::before {
+    background: inherit;
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 10px;
+    margin-left: 15px;
+    border-radius: 10px;
+  }
+  
+  .recent-button::after {
+    background: inherit;
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 10px;
+    margin-left: -15px;
+    border-radius: 10px;
+  }
+  
+  .home-button {
+    margin-top: 1%;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    border:10px solid black;
+    background-color: transparent;
+  }
+  
+  .back-button {
+    margin-top: 2%;
+    height:10px;
+    width: 25px;
+    border:10px solid black;
+    border-left: 5px solid transparent;
+    background-color: transparent;
+    border-radius: 0px 20px 20px 0px;
+  }
+  
+  .back-button::before {
+    content: "";
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -14px;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-right: 10px solid black ;
+  }
+  
+  /* nav styling ends here --------------------------------------------------> */
+  
+  
+  
+  /* notification panel styling start --------------------------------------> */
+  
+  .notif-panel {
+    display: flex;
+    height:40px;
+    width:460px;
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+  }
+  .notif-panel .left-info, .right-info {
+    width: 50%;
+    height: 50px;
+    background: transparent;
+  }
+  .left-info {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 20px;
+  }
+  .right-info {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top-right-radius: 20px;
+    
+  }
+  
+  .left-info div {
+    display: flex;
+    align-items: center;
+    width: 35%;
+    height: 50px;
+    font-size: 120%;
+    font-weight: bold;
+  }
+  .right-info div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .battery {
+    margin: 10px;
+    margin-top: 15px;
+    width: 10px;
+    height:15px;
+    background: grey;
+    z-index: 1;
+    border:1px solid grey;
+  }
+  .battery::before {
+    margin-top: -13px;
+    margin-left: 1px;
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 10px;
+    background: grey;
+    border-radius: 2px 2px 0px 0px;
+  }
+  
+  .battery-num {
+    margin-right:-6px;
+    margin-top: -4px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+  }
+  
+  .signal {
+    margin-top: 17px;
+    margin-right: 15px;
+    width: 5px;
+    height:15px;
+    background: grey;
+  }
+  .signal::before {
+    content: "";
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 5px;
+    width: 5px;
+    height:10px;
+    background: grey;
+  }
+  .signal::after {
+    content: "";
+    position: absolute;
+    margin-left: 8px;
+    margin-top: -5px;
+    width: 5px;
+    height:20px;
+    background: grey;
+  }
+  
+  .wifi {
+    margin-top:27px;
+    margin-right: 20px;
+    width: 4px;
+    height: 4px;
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .wifi:before {
+    margin-left:-7px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-top: 1px;
+    border: 4px solid transparent;
+    border-top: 4px solid black;
+    border-radius: 50%;
+    
+  }
+  
+  .wifi:after {
+    margin-left:-12px;
+    content: "";
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    margin-top: -10px;
+    border: 4px solid transparent;
+    border-top: 4px solid black;
+    border-radius: 50%;
+    
+  }
+  
+  /* screen canvas style ------------------------------> */
+  .screens {
+    width: inherit;
+    height: inherit;
+  }
+  /* home screen */
+  .home-screen {
+    display: flex;
+    justify-content: center;
+    background: blue;
+    display: none;
+  }
+  
+  .google {
+      position: absolute;
+      margin-top:250px;
+      width:400px;
+      height:45px;
+      border-radius:20px;
+      background:white;
+      opacity:90%;
+      z-index:1;
+    }
+  .google-logo {
+      position: absolute;
+      border-top: 10px solid #EA4335;
+      border-right: 10px solid  #4285F4;
+      border-bottom: 10px solid #34A853;
+      border-left: 10px solid #FBBC05;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      margin-top:2px;
+      margin-left:10px;
+      z-index:0;
+    }
+    
+    .google-logo::after {
+      content: "";
+      z-index: 101;
+      position: absolute;
+      border-top: 15px solid transparent;
+      border-right: 17px solid #FFFFFF;
+      margin-left:13px;
+      margin-top:-9px;
+      width: 0;
+      height: 0;
+    }
+    
+    .google-logo::before {
+      content: "";
+      z-index: 100;
+      position: absolute;
+      margin-left:9px;
+      margin-top:6px;
+      width: 20px;
+      height: 9px;
+      background: #4285F4;
+    }
+  .microphone {
+      margin-left: 360px;
+      margin-top:9px;
+      width: 13px;
+      height: 13px;
+      border-radius:50%;
+      border: 5px solid transparent;
+      border-bottom:5px solid #EA4335;
+      border-left:5px solid #FBBC05;
+      transform:rotate(-45deg);
+      background:transparent;
+    }
+    
+    .microphone::before {
+      content:"";
+      position:absolute;
+      margin-left:6px;
+      margin-top: -5px;
+      z-index:1;
+      border-radius:20px;
+      width: 9px;
+      height: 15px;
+      background: #4285F4;
+      transform:rotate(45deg);
+    }
+    
+    .microphone::after {
+      content:"";
+      position:absolute;
+      margin-left:-4px;
+      margin-top: 14px;
+      width: 3px;
+      height: 5px;
+      background: #4285F4;
+      transform:rotate(45deg);
+    }
+  .app-drawer {
+      display:grid;
+      grid-template-rows: repeat(6, 0fr);
+      grid-template-columns: repeat(6, 0fr);
+      position: absolute;
+      margin-top:320px;
+      height:490px;
+      width:450px;
+      background:transparent;
+      padding-left:2px;
+      z-index:1;
+    }
+  .app-icons {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:7px;
+      width:60px;
+      height:60px;
+      border-radius:20px;
+      background:white;
+      opacity:80%;
+    }
+  
+  #camera-icon {
+      position:absolute;
+      width:35px;
+      height:25px;
+      border-radius:8px;
+      background: #E30153;
+    }
+    
+    #camera-icon::before {
+      margin-left:10px;
+      margin-top:5px;
+      content:"";
+      position:absolute;
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      background:white;
+    }
+    
+    #camera-icon::after {
+      margin-left:25px;
+      margin-top:1px;
+      content:"";
+      position:absolute;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:white;
+    }
+    
+    #youtube {
+      position:absolute;
+      width:40px;
+      height:30px;
+      border-radius:10px;
+      background:#FF2525;
+    }
+    #youtube::before {
+      content:"";
+      position:absolute;
+      margin-left:15px;
+      margin-top:5px;
+      border:10px solid transparent;
+      border-left:15px solid white;
+      width:0px;
+      height:0px;
+      border-radius:0px;
+      background:transparent;
+    }
+    
+    #messages {
+      margin-top:-5px;
+      width:40px;
+      height:30px;
+      border-radius:50%;
+      background: #2B98DF;
+    }
+    #messages::before {
+      position:absolute;
+      content:"";
+      margin-top:22px;
+      margin-left:5px;
+      width:0px;
+      height:0px;
+      border: 5px solid transparent;
+      border-top:15px solid #2B98DF;
+      transform:rotate(25deg);
+      background:transparent;
+    }
+    
+    #files {
+      margin-top:-25px;
+      margin-left:-20px;
+      width:15px;
+      border:5px solid transparent;
+      border-bottom:10px solid #996900;
+      border-left:0px;
+      height:px;
+      background: transparent;
+    }
+    #files::before {
+      position:absolute;
+      content:"";
+      margin-top:5px;
+      width:40px;
+      height:25px;
+      border-radius:5px;
+      background: #F6B11D;
+    }
+    
+    #calendar {
+      width:30px;
+      height:35px;
+      background: #F6B11D;
+      border-radius:8px;
+    }
+    #calendar p{
+      position:absolute;
+      margin-left:5px;
+      margin-top:10px;
+      font-family:verdana;
+    }
+    
+    #calendar::before {
+      content:"";
+      position:absolute;
+      margin-top:-4px;
+      margin-left:5px;
+      width:7px;
+      height:7px;
+      background: white;
+      border-radius:50%;
+    }
+    #calendar::after {
+      content:"";
+      position:absolute;
+      margin-top:-4px;
+      margin-left:17px;
+      width:7px;
+      height:7px;
+      background: white;
+      border-radius:50%;
+    }
+    
+    #contacts {
+      margin-top:10px;
+      width:30px;
+      height:15px;
+      background: #FF8F00;
+      border-radius:100px 100px 0px 0px;
+    }
+    #contacts::before {
+      content:"";
+      position:absolute;
+      margin-top:-17px;
+      margin-left:7px;
+      width:15px;
+      height:15px;
+      background: #FF8F00;
+      border-radius:50%;
+    }
+    
+    
+    #phone {
+      border:10px solid #008A0B;
+      border-top:15px solid #008A0B;
+      border-bottom:15px solid #008A0B;
+      border-right:8px solid transparent;
+      width:5px;
+      height:13px;
+      background: transparent;
+      border-radius:15px 7px 7px 15px;
+      transform: rotate(-29deg);
+    }
+  
+  .clock_wrapper {
+      margin-top:100px;
+      margin-left:30px;
+      width:100px;
+      height:70px;
+      background: transparent;
+      font-family:Tahoma;
+      color:white;
+    }
+    
+    .time {
+      font-size:220%;
+      position:absolute;
+      margin-top:-45px;
+    }
+    
+    .date p {
+      font-size:80%;
+    }
+    
+    .am {
+      position:absolute;
+      margin-top:-8px;
+      margin-left:73px;
+    }
+    
+    .weather {
+      margin-top:-75px;
+      margin-left:315px;
+      width:110px;
+      height:70px;
+      background: transparent;
+      font-family:Tahoma;
+      color:white;
+    }
+    
+    .loc_icon {
+      margin-left:30px;
+      width:6px;
+      height:6px;
+      background: transparent;
+      border-radius:50%;
+      border:3px solid white;
+    }
+    .loc_icon::before {
+      content:"";
+      position:absolute;
+      margin-top:5px;
+      margin-left:-3px;
+      width:0px;
+      height:0px;
+      background: transparent;
+      border: 6px solid transparent;
+      border-top: 10px solid white;
+      border-radius:5px 5px 0px 0px;
+    }
+    
+    .loc {
+      position:absolute;
+      margin-top:-13px;
+      margin-left:50px;
+      font-size:80%;
+    }
+    
+    .temp {
+      margin-top:-25px;
+      margin-left:55px;
+      position:absolute;
+      font-size:200%;
+    }
+    
+    .info {
+      position:absolute;
+      margin-top:35px;
+      margin-left:-8px;
+      position:absolute;
+      font-size:50%;
+    }
+  .time-weather{
+    width: inherit;
+    height:250px;
+  }
+  
+  .app-icons:active {
+    opacity:50%;
+  }
+  
+  /* messages screen */
+  .messages-screen {
+    display:none;
+  }
+  .messages-header{
+    height:43%;
+    width:inherit;
+    background: #E3E8F0;
+  }
+  .messages-body {
+    height:60%;
+    width:inherit;
+    margin-top: -25px;
+    background: white;
+    border-radius: 30px 30px 0px 0px;
+    overflow-y: auto;
+    scrollbar-width: none; 
+  }
+  .messages-body::-webkit-scrollbar {
+    display: none
+  }
+  .messages-thread {
+    width:inherit;
+    height:70px;
+    background:white;
+    padding:15px;
+    display: flex;
+    justify-content: space-vevenly;
+    z-index: 100;
+  }
+  .photo {
+    margin-right: 5px;
+    width: 15%;
+    border-radius: 50%;
+  }
+  .mTime {
+    width: 10%;
+  }
+  .mInfo {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .mName {
+    font-family: Arial Black;
+    margin-right: 10px;
+    width: 50%;
+  }
+  .mPhone {
+    font-size: 0.8rem;
+    font-family: Arial Black;
+    width: 40%;
+  }
+  .mBody {
+    font-family: Arial;
+    width:100%;
+  }
+ 
